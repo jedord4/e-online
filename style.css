@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+     max-width: 1000px;
+     margin: auto;
+}
+header{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+nav a:hover{
+    color: #00786f;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: #00786f;
+}
+.start{
+    background-color: #00786f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+}
+.start:hover{
+    background-color: #005f5a;
+    cursor: pointer;
+}
+.humburger{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.humburger div {
+    height: 3px;
+    width: 25px;
+    background-color: #c6d4d3;
+    margin: 4px 0;
+    border-radius: 5px;
+}
+
+.hero{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.h1{
+    color: #00786f;
+    padding: 5px;
+}
+.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 40px;
+}
+.search{
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #00786f;
+    border-radius: 5px;
+}
+.search-btn{
+    padding: 10px 20px;
+    background-color: #00786f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#select{
+    padding: 10px;
+    border: 1px solid #00786f;
+    border-radius: 5px;
+    background-color: #00786f;
+    color: white;
+}
+.listing{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: #ade3e0;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 30px;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    flex-flow: 150px;
+    flex-grow: 1;
+}
+.count{
+    color: #00786f;
+    font-weight: bold;
+    font-size: 20px;  
+}
+.h2{
+    padding: 10px 0px;
+}
+.course-filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+.filter-list{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+   
+}
+.filter-list a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    border-bottom: 2px solid transparent;
+    transition-duration: 0.5s;
+}
+.filter-list a:hover{
+    color: #00786f;
+    border-bottom: 2px solid #00786f;
+}
+.course-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.course-card{
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 0px 0px 30px 0px;
+    width: 250px;
+    flex-flow: 150px;
+    flex-grow: 1;
+}
+img{
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    padding-bottom: 20px;
+}
+.name{
+    color: #00786f;
+}
+.ppp{
+    padding: 0px 0px 0px 20px;
+
+}
+.subscribe{
+    background-color: #00786f;
+    color: white;
+    border-radius: 5px;
+    padding: 30px;
+    line-height: 50px;
+}
+.subscribe-input{
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #00786f;
+}
+.subscribe-btn{
+    padding: 10px 20px;
+    background-color: #f4711b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+footer{
+    text-align: center;
+    padding-top: 50px;
+    color: gray;
+    font-size: 14px;
+}
+
+.humburger:hover .mobile_menu {
+    display: flex;
+}
+.mobile_menu{
+    flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+    .humburger{
+        display: flex;
+    }
+    ul{
+        display: none;
+    }
+    nav .start{
+        display: none;
+    }
+    .listing{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    .listing{
+        grid-template-columns: 1fr;
+    }
+    .search-bar{
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+    .search{
+        width: 100%;
+    }
+    .subscribe-bar{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .subscribe-input{
+        width: 100%;
+    }
+}
